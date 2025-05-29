@@ -6,80 +6,80 @@
   <title>GoodToGo | Store Locations</title>
   <style>
     :root {
-      --bg-color: #fdfdfd;
-      --accent: #0073e6;
-      --text-dark: #222;
-      --text-light: #555;
-      --card-bg: #ffffff;
-      --border-color: #e0e0e0;
+      --bg: red;
+      --primary: #0073e6;
+      --text-dark: #111;
+      --text-light: #666;
+      --card-bg: #fff;
+      --border: #ddd;
     }
 
-    * {
+    *, *::before, *::after {
       box-sizing: border-box;
-      margin: 0;
-      padding: 0;
     }
 
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: var(--bg-color);
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background-color: var(--bg);
       color: var(--text-dark);
+      line-height: 1.6;
       padding: 2rem 1rem;
     }
 
     .container {
-      max-width: 1000px;
+      max-width: 960px;
       margin: 0 auto;
       padding: 1rem;
     }
 
     h1 {
-      font-size: 2.5rem;
+      font-size: 2.25rem;
       text-align: center;
       margin-bottom: 0.5rem;
-      color: var(--text-dark);
     }
 
-    p {
+    p.description {
       text-align: center;
-      font-size: 1rem;
       color: var(--text-light);
       margin-bottom: 2rem;
     }
 
-    .state-title {
+    .region {
+      margin-top: 2.5rem;
+    }
+
+    .region-title {
       font-size: 1.5rem;
       font-weight: 600;
       color: var(--text-dark);
-      margin-top: 3rem;
+      border-left: 4px solid var(--primary);
+      padding-left: 0.75rem;
       margin-bottom: 1rem;
-      border-left: 4px solid var(--accent);
-      padding-left: 10px;
     }
 
     .store {
-      background-color: var(--card-bg);
-      border: 1px solid var(--border-color);
-      border-radius: 8px;
-      padding: 1rem 1.5rem;
-      margin-bottom: 1.2rem;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-      transition: box-shadow 0.2s ease;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 0.5rem;
+      padding: 1rem 1.25rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      transition: box-shadow 0.2s;
     }
 
     .store:hover {
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     }
 
     .store strong {
-      font-size: 1.1rem;
       display: block;
-      margin-bottom: 0.5rem;
-      color: var(--text-dark);
+      font-size: 1.1rem;
+      margin-bottom: 0.25rem;
     }
 
     .store a {
-      color: var(--accent);
+      color: var(--primary);
       text-decoration: none;
       font-size: 0.95rem;
     }
@@ -91,19 +91,16 @@
     .store span {
       display: block;
       margin-top: 0.3rem;
-      font-size: 0.9rem;
       color: var(--text-light);
+      font-size: 0.9rem;
     }
 
     @media (max-width: 600px) {
       h1 {
-        font-size: 2rem;
+        font-size: 1.75rem;
       }
-      .state-title {
-        font-size: 1.3rem;
-      }
-      .store {
-        padding: 1rem;
+      .region-title {
+        font-size: 1.25rem;
       }
     }
   </style>
@@ -111,87 +108,36 @@
 <body>
   <div class="container">
     <h1>All GoodToGo Store Locations</h1>
-    <p>Find the nearest store near you</p>
+    <p class="description">Find the nearest store near you</p>
 
-    <!-- Delhi -->
-    <div class="state-title">Delhi</div>
-    <div class="store"><strong>East Patel Nagar</strong>
-      <a href="https://maps.google.com/?q=28.64589,77.17414" target="_blank">SHOP NO. 7, 29/1, EAST PATEL NAGAR M NEW DELHI</a>
-      <span>Phone: <a href="tel:9310904443">9310904443</a></span>
-    </div>
-    <div class="store"><strong>Punjabi Bagh</strong>
-      <a href="https://maps.google.com/?q=28.66572,77.12139" target="_blank">SHOP NO 17, ROAD NO. 17, PUNJABI BAGH EXT. NEW DELHI</a>
-      <span>Phone: <a href="tel:9350003135">9350003135</a></span>
-    </div>
-    <div class="store"><strong>Malviya Nagar</strong>
-      <a href="https://maps.google.com/?q=28.53297,77.20808" target="_blank">E 5/1, shop no 6, Malviya Nagar, New Delhi</a>
-      <span>Phone: <a href="tel:9311774144">9311774144</a></span>
-    </div>
-    <div class="store"><strong>Shankar Road</strong>
-      <a href="https://maps.google.com/?q=28.63578,77.18525" target="_blank">1/120, Old Rajendra Nagar, Shankar Road, Near by Oberoy Biryani, Delhi</a>
-      <span>Phone: <a href="tel:9205888193">9205888193</a></span>
-    </div>
-    <div class="store"><strong>Chhatarpur</strong>
-      <a href="https://maps.google.com/?q=28.49239,77.18489" target="_blank">SHOP NO. 5 CHHATARPUR MINI MARKET MAIN ROAD CHHATARPUR NEW DELHI</a>
-      <span>Phone: <a href="tel:9266732260">9266732260</a></span>
+    <div class="region">
+      <div class="region-title">Delhi</div>
+      <div class="store"><strong>East Patel Nagar</strong>Click here for Location :-> <a href="https://maps.google.com/?q=28.64589,77.17414" target="_blank">SHOP NO. 7, 29/1, EAST PATEL NAGAR M NEW DELHI</a><span>Click here to call :-> <a href="tel:9310904443">9310904443</a></span></div>
+      <div class="store"><strong>Punjabi Bagh</strong>Click here for Location :-> <a href="https://maps.google.com/?q=28.66572,77.12139" target="_blank">SHOP NO 17, ROAD NO. 17, PUNJABI BAGH EXT. NEW DELHI</a><span>Click here to call :-> <a href="tel:9350003135">9350003135</a></span></div>
+      <div class="store"><strong>Malviya Nagar</strong>Click here for Location :-> <a href="https://maps.google.com/?q=28.53297,77.20808" target="_blank">E 5/1, shop no 6, Malviya Nagar, New Delhi</a><span>Click here to call :-> <a href="tel:9311774144">9311774144</a></span></div>
+      <div class="store"><strong>Shankar Road</strong>Click here for Location :-> <a href="https://maps.google.com/?q=28.63578,77.18525" target="_blank">1/120, Old Rajendra Nagar, Shankar Road, Near by Oberoy Biryani, Delhi</a><span>Click here to call :-> <a href="tel:9205888193">9205888193</a></span></div>
+      <div class="store"><strong>Chhatarpur</strong>Click here for Location :-> <a href="https://maps.google.com/?q=28.49239,77.18489" target="_blank">SHOP NO. 5 CHHATARPUR MINI MARKET MAIN ROAD CHHATARPUR NEW DELHI</a><span>Click here to call :-> <a href="tel:9266732260">9266732260</a></span></div>
     </div>
 
-    <!-- Uttar Pradesh -->
-    <div class="state-title">Uttar Pradesh</div>
-    <div class="store"><strong>Gaur City 2, Gr Noida</strong>
-      <a href="https://maps.google.com/?q=28.62069,77.42194" target="_blank">LGF 3 - AISHWARYAM MART, GAUR CITY 2, GREATER NOIDA</a>
-      <span>Phone: <a href="tel:9311133855">9311133855</a></span>
-    </div>
-    <div class="store"><strong>Noida 119</strong>
-      <a href="https://maps.google.com/?q=28.58750,77.40311" target="_blank">LGF 28, THE ARANYA, PLOT NO. GH2, SEC-119, NOIDA 201301</a>
-      <span>Phone: <a href="tel:9599222870">9599222870</a></span>
-    </div>
-    <div class="store"><strong>Noida 75</strong>
-      <a href="https://maps.google.com/?q=28.57178,77.38286" target="_blank">Shop No -19, FUTEC GARDENIA GATEWAY, PLOT NO GH-10, SECTOR 75, NOIDA</a>
-      <span>Phone: <a href="tel:9311774146">9311774146</a></span>
-    </div>
-    <div class="store"><strong>Noida 137</strong>
-      <a href="https://maps.google.com/?q=28.50647,77.40869" target="_blank">SHOP NO UGF-015, Ajnara Daffodils, Plot no GH-07/B, Sector 137, Noida, Uttar Pradesh</a>
-      <span>Phone: <a href="tel:9311080065">9311080065</a></span>
-    </div>
-    <div class="store"><strong>Nirala Estate Bizz Park</strong>
-      <a href="https://maps.google.com/?q=28.58553,77.44061" target="_blank">LGF-42, Nirala Estate Biz Park, Tech Zone IV, Gr. Noida West 201009</a>
-      <span>Phone: <a href="tel:9311080066">9311080066</a></span>
+    <div class="region">
+      <div class="region-title">Uttar Pradesh</div>
+      <div class="store"><strong>Gaur City 2, Gr Noida</strong>Click here for Location :-> <a href="https://maps.google.com/?q=28.62069,77.42194" target="_blank">LGF 3 - AISHWARYAM MART, GAUR CITY 2, GREATER NOIDA</a><span>Click here to call :-> <a href="tel:9311133855">9311133855</a></span></div>
+      <div class="store"><strong>Noida 119</strong>Click here for Location :-> <a href="https://maps.google.com/?q=28.58750,77.40311" target="_blank">LGF 28, THE ARANYA, PLOT NO. GH2, SEC-119, NOIDA 201301</a><span>Click here to call :-> <a href="tel:9599222870">9599222870</a></span></div>
+      <div class="store"><strong>Noida 75</strong>Click here for Location :-> <a href="https://maps.google.com/?q=28.57178,77.38286" target="_blank">Shop No -19, FUTEC GARDENIA GATEWAY, PLOT NO GH-10, SECTOR 75, NOIDA</a><span>Click here to call :-> <a href="tel:9311774146">9311774146</a></span></div>
+      <div class="store"><strong>Noida 137</strong>Click here for Location :-> <a href="https://maps.google.com/?q=28.50647,77.40869" target="_blank">SHOP NO UGF-015, Ajnara Daffodils, Plot no GH-07/B, Sector 137, Noida, Uttar Pradesh</a><span>Click here to call :-> <a href="tel:9311080065">9311080065</a></span></div>
+      <div class="store"><strong>Nirala Estate Bizz Park</strong>Click here for Location :-> <a href="https://maps.google.com/?q=28.58553,77.44061" target="_blank">LGF-42, Nirala Estate Biz Park, Tech Zone IV, Gr. Noida West 201009</a><span>Click here to call :-> <a href="tel:9311080066">9311080066</a></span></div>
     </div>
 
-    <!-- Haryana -->
-    <div class="state-title">Haryana</div>
-    <div class="store"><strong>Vyapar Kendra Gurgaon</strong>
-      <a href="https://maps.google.com/?q=28.46006,77.08328" target="_blank">SHOP NUMBER 135, GROUND FLOOR, SUSHANT VYAPAR KENDRA, GURUGRAM. 122022</a>
-      <span>Phone: <a href="tel:9350023335">9350023335</a></span>
-    </div>
-    <div class="store"><strong>Tulip Lemon Gurgaon</strong>
-      <a href="https://maps.google.com/?q=28.39453,77.03186" target="_blank">TULIP LEMON SHOP NO. 21, SECTOR 69, GURUGRAM</a>
-      <span>Phone: <a href="tel:9821883381">9821883381</a></span>
-    </div>
-    <div class="store"><strong>Gurgaon 54</strong>
-      <a href="https://maps.google.com/?q=28.43956,77.10336" target="_blank">Plot No. 12, Saraswati Kunj, Sector-54, Gurugram</a>
-      <span>Phone: <a href="tel:9205888190">9205888190</a></span>
-    </div>
-    <div class="store"><strong>Gurgaon 65</strong>
-      <a href="https://maps.google.com/?q=28.40628,77.06511" target="_blank">115, 1st Floor, Block-4 M3M 65, Sector-65, Gurugram</a>
-      <span>Phone: <a href="tel:9205888191">9205888191</a></span>
-    </div>
-    <div class="store"><strong>Gurgaon 50</strong>
-      <a href="https://maps.google.com/?q=28.41425,77.06561" target="_blank">SECTOR-50, GURUGRAM</a>
-      <span>Phone: <a href="tel:9205888192">9205888192</a></span>
-    </div>
-    <div class="store"><strong>Gurgaon 84</strong>
-      <a href="https://maps.google.com/?q=28.40744,76.97072" target="_blank">Ground Floor 72, M3M Market, Sector 84 Gurgaon</a>
-      <span>Phone: <a href="tel:9220500624">9220500624</a></span>
-    </div>
-    <div class="store"><strong>Gurgaon 76</strong>
-      <a href="https://maps.google.com/?q=28.39203,76.99336" target="_blank">B5-52, Suncity Avenue Sector 76 Gurgaon</a>
-      <span>Phone: <a href="tel:9220500625">9220500625</a></span>
-    </div>
-    <div class="store"><strong>Dwarka 109</strong>
-      <a href="https://maps.google.com/?q=28.50364,77.00761" target="_blank">CG 122, Ground Floor, Tower C, Conscient - 1, Sector 109, Gurugram, 122017</a>
-      <span>Phone: <a href="tel:9220500626">9220500626</a></span>
+    <div class="region">
+      <div class="region-title">Haryana</div>
+      <div class="store"><strong>Vyapar Kendra Gurgaon</strong>Click here for Location :-> <a href="https://maps.google.com/?q=28.46006,77.08328" target="_blank">SHOP NUMBER 135, GROUND FLOOR, SUSHANT VYAPAR KENDRA, GURUGRAM. 122022</a><span>Click here to call :-> <a href="tel:9350023335">9350023335</a></span></div>
+      <div class="store"><strong>Tulip Lemon Gurgaon</strong>Click here for Location :-> <a href="https://maps.google.com/?q=28.39453,77.03186" target="_blank">TULIP LEMON SHOP NO. 21, SECTOR 69, GURUGRAM</a><span>Click here to call :-> <a href="tel:9821883381">9821883381</a></span></div>
+      <div class="store"><strong>Gurgaon 54</strong>Click here for Location :-> <a href="https://maps.google.com/?q=28.43956,77.10336" target="_blank">Plot No. 12, Saraswati Kunj, Sector-54, Gurugram</a><span>Click here to call :-> <a href="tel:9205888190">9205888190</a></span></div>
+      <div class="store"><strong>Gurgaon 65</strong>Click here for Location :-> <a href="https://maps.google.com/?q=28.40628,77.06511" target="_blank">115, 1st Floor, Block-4 M3M 65, Sector-65, Gurugram</a><span>Click here to call :-> <a href="tel:9205888191">9205888191</a></span></div>
+      <div class="store"><strong>Gurgaon 50</strong>Click here for Location :-> <a href="https://maps.google.com/?q=28.41425,77.06561" target="_blank">SECTOR-50, GURUGRAM</a><span>Click here to call :-> <a href="tel:9205888192">9205888192</a></span></div>
+      <div class="store"><strong>Gurgaon 84</strong>Click here for Location :-> <a href="https://maps.google.com/?q=28.40744,76.97072" target="_blank">Ground Floor 72, M3M Market, Sector 84 Gurgaon</a><span>Click here to call :-> <a href="tel:9220500624">9220500624</a></span></div>
+      <div class="store"><strong>Gurgaon 76</strong>Click here for Location :-> <a href="https://maps.google.com/?q=28.39203,76.99336" target="_blank">B5-52, Suncity Avenue Sector 76 Gurgaon</a><span>Click here to call :-> <a href="tel:9220500625">9220500625</a></span></div>
+      <div class="store"><strong>Dwarka 109</strong>Click here for Location :-> <a href="https://maps.google.com/?q=28.50364,77.00761" target="_blank">CG 122, Ground Floor, Tower C, Conscient - 1, Sector 109, Gurugram, 122017</a><span>Click here to call :-> <a href="tel:9220500626">9220500626</a></span></div>
     </div>
   </div>
 </body>
